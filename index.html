@@ -87,7 +87,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/elon-musk.jpg" alt="Sentiment Analysis on Elon Musk's Tweets" />
+                            <img class="img-fluid" src="assets/img/elon-musk-laser-eyes.jfif" alt="Sentiment Analysis on Elon Musk's Tweets" />
                         </div>
                     </div>
                     <!-- Portfolio Item 4-->
@@ -105,7 +105,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/data-analyst.jpg" alt="Data Analyst" />
+                            <img class="img-fluid" src="assets/img/hr-attrition-dashboard.png" alt="HR attrition dashboard on Google Data Studio" />
                         </div>
                     </div>
                     <!-- Portfolio Item 6-->
@@ -134,7 +134,7 @@
                 <!-- About Section Content-->
                 <div class="row">
                     <div class="col-lg-4 ms-auto"><p class="lead">A digital marketer in the morning, and an ecommerce seller at night. Not content with the current situation, and knowing that data is the future, I have then pursuaded myself to get into this industry from a completely zero background, at the age of 29.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">Self-taught the fundamental of Data Science, as well as some languages like Python and SQL, I have then joined the Data Science Uncut Bootcamp 2.0 by TheLead.io to enhance my skills and knowledge. And here I am today, building this site using a new language, HTML!</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">Self-taught the fundamental of Data Science, as well as some languages like Python and SQL, I have then joined the Data Science Uncut Bootcamp 2.0 by TheLead.io to enhance my skills. And here I am today, building this site using a new language, HTML!</p></div>
                 </div>
             </div>
         </section>
@@ -175,7 +175,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-center text-uppercase text-secondary mb-0" style="line-height:1.3">Telco Churn Prediction</h2>
+                                    <h2 class="portfolio-modal-title text-center text-uppercase text-secondary mb-0" style="line-height:1.3">Machine Learning Case Study: Telco Churn Prediction</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -186,14 +186,124 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/telco-churn.jfif" alt="Telco Churn" />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-3">
-                                        Telco users churn from time to time, due to various reasons. This project intends to provide the following insights:
-                                        <ul class="mb-5">
-                                            <li>The reasons why users churn from the provider.</li>
-                                            <li>Predict what kind of users are more likely to churn in the future.</li>
+                                        One of the biggest challenges Telco companies face is their customers terminating their contract for various reasons (or known as "churn"), such as getting a better package or experience from the other companies.<br>
+                                        <br>
+                                        Therefore, it is essential for a Telco company to investigate the underlying reasons of their customers churning. By doing so, the company will then be able to focus on the real problem, improve it, and ultimately reducing their churn rate.<br>
+                                        <br>
+                                        <h2>
+                                            Defining problem statements
+                                        </h2>
+                                        <br>
+                                        To tackle the challenge aforementioned, I have defined the following problem statements that a Telco company may be interested in finding out:<br>
+                                        <br>
+                                        <ol>
+                                            <li>What are the reasons that would make customers churn?</li>
+                                            <li>What kind of customers are more likely to churn in the future?</li>
+                                        </ol>
+                                        I utilized the framework by <a href="https://thelead.io/" target="_blank">LEAD</a> throughout the entire case study, called the <b>OSEMN Framework</b>, which comrpises of: Obtain, Scrub, Explore, Model and iNterpret<br>
+                                        <br>
+                                        <h2>
+                                            Let's get our hand dirty
+                                        </h2>
+                                        <br>
+                                        In this case study, this <a href="https://www.kaggle.com/blastchar/telco-customer-churn" target="_blank">dataset</a> from Kaggle has been used as the source of data.<br>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/telco-churn-rate.png" alt="Telco churn rate"><br>
+                                        Upon inspecting the dateset, this company has a churn rate of 26%. According to <a href="https://www.statista.com/statistics/816735/customer-churn-rate-by-industry-us/" target="_blank">Statista</a>, the average churn rate for the Telecom industry is roughly 21%. This means that this company has a higher-than-average churn rate as compared to its competitors.<br>
+                                        <br>
+                                        Let's dive deeper into the possible reasons that contribute to this high churn rate. There are indeed some interesting reasons that one group of customers are more likely than others to churn.<br>
+                                        <br>
+                                        <h2>
+                                            Exploratory data analysis
+                                        </h2>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/telco-churn-contract-payment-method.png" alt="Contract vs Payment Method on Telco churn rate"><br>
+                                        From the bar plots above, we can clearly see that customers having a monthly contract are more likely to churn as compared to their counterparts with a yearly or longer contract.<br>
+                                        <br>
+                                        Not only that, more than half of the customers who use electronic check as their main payment method for the service are more likely to churn as compared to those who pay via mailed check, bank transfer or credit card.<br>
+                                        <br>
+                                        This finding could possibly indicate the following events:<br>
+                                        <br>
+                                        <ul>
+                                            <li>When it comes to monthly contract, this telco's service may not be as good as its competitors, giving the customers no choice but to terminate their contract after a period of time.</li>
+                                            <li>There could be a system failure to receive electronic check and this seems to require immediate attention, as more than half of the customers who choose this payment method actually churned.</li>
                                         </ul>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/telco-churn-tech-support.png" alt="Tech support on Telco churn rate"><br>
+                                        Another interesting finding is that the subscription for anything related to the customers' phone security seem to play an essential role on the Telco's churn rate.<br>
+                                        <br>
+                                        Apparently, customers who subscribe to the Telco's online security, online backup, device protection, and tech support are less likely to churn as compared to their counterparts. This brings forward another possible implication:<br>
+                                        <br>
+                                        <ul>
+                                            <li>Perhaps the Telco can consider including the phone security services as <b>part</b> of their packages, or even making it compulsory? They could really use some extra protection. &#128512;</li>
+                                        </ul>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/telco-churn-heatmap.png" alt="Telco churn correlation heatmap"><br>
+                                        <i>Only part of the heatmap is extracted here to provide a clearer explanation. Full heatmap can be found in the <a href="https://colab.research.google.com/drive/14AqCW0gnpy6V2J-S1by2G2af8UJOvdwf#scrollTo=pkHhlCRQOXik" target="_blank">source code</a>.</a></i><br>
+                                        <br>
+                                        Last but not least, let's interpret a little on the correlation heatmap above. Other than the few factors that we have discussed above, it's also interesting to note the correlation between customers who select Fiber optic as their internet service and their churn rate. It seems like people who subscribed to this Telco company's Fiber optic are far more likely to churn than those who subscribed to DSL service, or completely without internet service.<br>
+                                        <br>
+                                        Therefore, it brings forth the final implication from the EDA:<br>
+                                        <br>
+                                        <ul>
+                                            <li>There could be some technical issues with the Fiber optic internet service that cause the customers to churn ultimately after a period of usage. It is worth discovering it to minimize the damage in the future.</li>
+                                        </ul>
+                                        <br>
+                                        <h2>
+                                            Machine learning modeling: Who is more likely to churn?
+                                        </h2>
+                                        <br>
+                                        Now that we have got our EDA done, it's time to build a model to predict who is more likely to churn.<br>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/telco-churn-model-features.png" alt="Telco churn model features"><br>
+                                        From the correlation heatmap, I have chosen the following factors as my model features:<br>
+                                        <br>
+                                        <ol>
+                                            <li>Tenure</li>
+                                            <li>Internet Service - Fiber Optic</li>
+                                            <li>Month-to-month Contract</li>
+                                            <li>Monthly Charges</li>
+                                            <li>Total Charges</li>
+                                            <li>Paperless Billing</li>
+                                        </ol>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/telco-churn-train-test-split.png" alt="Telco churn model features"><br>
+                                        The dataset is split into 2 groups, where 70% of them is the training data, and 30% of them is the test data.<br>
+                                        <br>
+                                        Upon getting our data ready, it is then used to fit into our model, decision tree, with a depth of 3 levels for basic prediction. This is the result:<br>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/telco-churn-decision-tree.png" alt="Telco churn decision tree"><br>
+                                        Finally, let's test the accuracy score of this model.<br>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/telco-churn-accuracy-score.png" alt="Telco churn decision tree accuracy score"><br>
+                                        The accuracy score of this decision tree model is close to 80%. It seems to be a rather good accuracy.<br>
+                                        <br>
+                                        According to this decision tree, customers who are on a monthly contract and are currently subscribing to fiber optic as their internet service, are very likely to churn. What increases the odd of them churning even more is that their tenure with the Telco is less than 15.5 months.<br>
+                                        <br>
+                                        <h2>
+                                            Conclusion
+                                        </h2>
+                                        <br>
+                                        Coming back to our 2 problem statements defined in the beginning:<br>
+                                        <br>
+                                        <h5>1. What are the reasons that would make customers churn?</h5><br>
+                                        There are a couple plausible reasons that could affect the Telco's churn rate that are worth investigating:<br>
+                                        <br>
+                                        <ul>
+                                            <li>Dissatisfied service experience provided to monthly-contract subscribers</li>
+                                            <li>Potential technical issues on electronic check payment</li>
+                                            <li>Incompetent fiber optic package</li>
+                                        </ul>
+                                        <br>
+                                        <h5>2. What kind of customers are more likely to churn in the future?</h5><br>
+                                        This answer to this is somewhat similar to the reasons mentioned above. Customers who are currently on a monthly contract and are currently subscribing to fiber optic are most likely to churn. If their tenure is less than 15.5 months, the odds of them churning increases by another 50%.<br>
+                                        <br>
+                                        <br>
+                                        <b>Tools / libraries used:</b> <i>Python [pandas, seaborn, matplotlib, numpy, sklearn(tree)]</i>
+                                        <br>
+                                        <br>
                                     </p>
                                     <p>
-                                        <a href="https://colab.research.google.com/drive/14AqCW0gnpy6V2J-S1by2G2af8UJOvdwf" class="btn text-center btn-primary" target="_blank">Access the Notebook</a>
+                                        <a href="https://colab.research.google.com/drive/14AqCW0gnpy6V2J-S1by2G2af8UJOvdwf" class="btn text-center btn-primary" target="_blank">source code</a>
                                     </p>
                                 </div>
                             </div>
@@ -212,7 +322,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-center text-secondary text-uppercase mb-0" style="line-height:1.3">Social Media Ads Forecasting</h2>
+                                    <h2 class="portfolio-modal-title text-center text-secondary text-uppercase mb-0" style="line-height:1.3">Linear Regression: Social Media Ads Forecasting</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -227,9 +337,12 @@
                                         <ul class="mb-5">
                                             <li>How would you allocate a marketing budget of $100,000 among the three social media platforms that we are using right now, based on our past performance?</li>
                                         </ul>
+                                        <b>Tools / libraries used:</b> <i>Python [pandas, seaborn, matplotlib, sklearn(linear regression)]</i>
+                                        <br>
+                                        <br>
                                     </p>
                                     <p>
-                                        <a href="https://colab.research.google.com/drive/1JFpqbRxLgEp7TpuI1HDYatyPVd5w1OhQ" class="btn text-center btn-primary" target="_blank">Access the Notebook</a>
+                                        <a href="https://colab.research.google.com/drive/1JFpqbRxLgEp7TpuI1HDYatyPVd5w1OhQ" class="btn text-center btn-primary" target="_blank">source code</a>
                                     </p>
                                 </div>
                             </div>
@@ -248,7 +361,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-center text-secondary text-uppercase mb-0" style="line-height:1.3">Sentiment Analysis on Elon Musk's Tweets</h2>
+                                    <h2 class="portfolio-modal-title text-center text-secondary text-uppercase mb-0" style="line-height:1.3">The Elon Musk Effect</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -256,13 +369,100 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/elon-musk.jpg" alt="Sentiment Analysis on Elon Musk's Tweets" />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/elon-musk-laser-eyes.jfif" alt="Elon Musk laser eyes" />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">
-                                        An interesting project overall, as I tried to analyze Elon Musk's tweets in 10 years, from 2011 till March 2021. A search engine is also built in the interactive notebook so you can search for any keywords that you want in it, and get the results of the top 5 tweets about that keyword. Try it out now!
+                                        If you have been on the news for the past new months, you would have known a little about the rise and fall (and rise again recently) of the cryptocurrency Bitcoin. If you are in a little bit deeper, you would have heard how Elon Musk single-handedly "influenced" the cryptocurrency market, especially Bitcoin and Dogecoin.<br>
+                                        <br>
+                                        The climax happened when Elon Musk announced that Telsa will be <a href="https://www.businessinsider.com/elon-musk-tweets-you-can-buy-a-tesla-with-bitcoin-2021-3", target="_blank">accepting Bitcoin as one of their payment methods</a> back in March 24 and then later <a href="https://www.businessinsider.com/elon-musk-bitcoin-tesla-payment-green-energy-environment-2021-6", target="_blank">reversed his position</a> in May 13.<br>
+                                        <br>
+                                        You know how big the news is when your wife who didn't care about the market, suddenly asks: "How come Elon Musk so powerful one ah?" &#128514<br>
+                                        <br>
+                                        There are several articles written about the <a href="https://www.forbes.com/sites/forbescommunicationscouncil/2021/02/25/the-elon-musk-effect-the-timeless-power-of-disruption-and-brand-authority/" target="_blank">Elon Musk Effect</a> and also how his <a href="https://www.forbes.com/sites/ronshevlin/2021/02/21/how-elon-musk-moves-the-price-of-bitcoin-with-his-twitter-activity/" target="_blank">Twitter activity has moved the market</a> in an unexpected way.<br>
+                                        <br>
+                                        <h2>Measuring the Elon Musk Effect</h2>
+                                        <br>
+                                        Inspired by this awesome Kaggler who measured <a href="https://www.kaggle.com/hidelloon/dogecoin-and-dogefather-elon-musk" target="_blank">the return on Dogecoin</a> after Elon Musk's tweets, I have decided to find out the same thing about Bitcoin.<br>
+                                        <br>
+                                        So I have this one question:<br>
+                                        <br>
+                                        <b>How wealthy will I be in 5 days if I own Bitcoin before Elon Musk tweets about it?</b><br>
+                                        <br>
+                                        <br>
+                                        <h2>Exploring the datasets</h2>
+                                        <br>
+                                        I have used two separate datasets in this project:<br>
+                                        <br>
+                                        <ol>
+                                            <li><a href="https://www.kaggle.com/ayhmrba/elon-musk-tweets-2010-2021" target="_blank">Elon Musk's Tweets</a> from 2010 to March 24, 2021</li>
+                                            <li><a href="https://www.kaggle.com/varpit94/bitcoin-data-updated-till-26jun2021" target="_blank">Bitcoin historical price chart</a> from Sep 17, 2014 to July 9, 2021</li>
+                                        </ol>
+                                        <br>
+                                        First, let's have a glance at Bitcoin's historical price chart.<br>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/elon-musk-bitcoin-price-chart.png" alt="Bitcoin historical price chart">
+                                        <br>
+                                        It seems like Bitcoin received most of the attention starting from this year that its price shot up from $20,000 to its peak at $63,000. Throughout these years, it also experienced a heavy crash of more than 70% on 2018, as well as a 50% crash this year.<br>
+                                        <br>
+                                        Moving on to the dataset that contains tweets from Elon Musk.<br>
+                                        <br>
+                                        Because I'm interested in only his tweets that are related to Bitcoin, I have filtered the dataset with some keywords like "Bitcoin" and "BTC".<br>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/elon-musk-bitcoin-tweets.png" alt="Elon Musk tweets about Bitcoin">
+                                        <br>
+                                        Do take note this filter only works on tweets that mention Bitcoin specifically on text, and this includes tweets from himself, and also tweets that he replied to some other users. Tweets that contain images that are relevant to Bitcoin are not included in our analysis.<br>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/elon-musk-bitcoin-tweets-chart.png" alt="Number of times Bitcoin mentioned in Elon Musk's tweets">
+                                        <br>
+                                        There are a total of 21 instances where he mentioned Bitcoin throughout the years.<br>
+                                        <br>
+                                        Apparently, Elon Musk started talking about Bitcoin on Twitter in November 2017. He then mentioned Bitcoin twice in 2018 and 2019, and subsequently talking about it more and more from 2020 onwards.<br>
+                                        <br>
+                                        <br>
+                                        <h2>Exploratory Data Analysis</h2>
+                                        <br>
+                                        Now, it's time to put the datasets together and have a closer look.<br>
+                                        <br>
+                                        I started off by merging the two datasets with a common column called "Date", which is the date of Elon Musk's tweet posting (I'll call it the Tweet Day), and the closing price of Bitcoin on that day.<br>
+                                        <br>
+                                        After putting them together, I then calculated the difference between the price of Bitcoin in the next 5 days and the price of Bitcoin on the Tweet Day. This will be the day-to-day return after the Tweet Day. The tweets are be grouped together if Elon Musk tweeted them on the same day.<br>
+                                        <br>
+                                        Last but not least, a line chart of the return in percentage after the Tweet Day is plotted.<br>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/elon-musk-bitcoin-return-line-chart.png" alt="Return on BTC after Elon Musk tweets about it">
+                                        <br>
+                                        The darker the line, the more recent the tweet is posted.<br>
+                                        <br>
+                                        Based on line chart, we can see that most of Elon Musk's recent tweets have garnered a positive return right after his Tweet Day. Some of the returns even go as far up as 15% in just one day after he tweeted about Bitcoin.<br>
+                                        <br>
+                                        Another box plot also has also been employed to further visualize the effect of Elon Musk's tweets.<br>
+                                        <br>
+                                        <img class="img-fluid rounded mb-3" src="assets/img/elon-musk-bitcoin-return-box-plot.png" alt="Return on BTC after Elon Musk tweets about it">
+                                        <br>
+                                        As we can see in this plot, the median return up to 5 days after the Tweet day, has been a positive one, hanging around 2-4%. Even though there are intances of the return being negative, but the majority of the data are indicating an above average of return after Elon Musk's tweets.<br>
+                                        <br>
+                                        What this means is that, <b>if you own Bitcoin before Elon Musk tweets about it, you have a rather fair chance of seeing your Bitcoin value goes up by a few percent.</b><br>
+                                        <br>
+                                        <i>Disclaimer: The above references an opinion and is for information purposes only. It is not intended to be any financial advice.</i><br>
+                                        <br>
+                                        <br>
+                                        <h2>Closing thoughts</h2>
+                                        <br>
+                                        This case study certainly echoes the rest, indicating that Elon Musk has the potential of "moving" a market, simply by tweeting about it.<br>
+                                        <br>
+                                        Of course, in reality, Elon Musk is not the only one who has such power. In fact, there are tons of people, like celebrities and influencers, who can easily influence others to perform a trade, thereby moving the market price.<br>
+                                        <br>
+                                        What's so scary about it is that this is a common phenomenon nowadays. We have victims everyday being manipulated by others and are losing money because of that.<br> 
+                                        <br>
+                                        Like it or not, it is important for us to get equipped with sufficient financial knowledge to avoid falling prey to those who have malicious intent.<br>
+                                        <br>
                                     </p>
+                                    <br>
+                                    <b>Tools / libraries used:</b> <i>Python [pandas, seaborn, matplotlib, nltk(sentiment intensity analyzer)]</i>
+                                    <br>
+                                    <br>
                                     <p>
-                                        <a href="https://colab.research.google.com/drive/1urLrDv2BRGoaVsykr5Ik6hRcQ7WC6gzh" class="btn text-center btn-primary" target="_blank">Access the Notebook</a>
+                                        <a href="https://colab.research.google.com/drive/1Cd97fOpg5Sbld22jALl7GdD1V6QekpM9#scrollTo=ThnXrihNM0KQ" class="btn text-center btn-primary" target="_blank">source code</a>
                                     </p>
                                 </div>
                             </div>
@@ -281,7 +481,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-center text-secondary text-uppercase mb-0" style="line-height:1.3">Sentiment Analysis for a Hotel's Review on Tripadvisor</h2>
+                                    <h2 class="portfolio-modal-title text-center text-secondary text-uppercase mb-0" style="line-height:1.3">Sentiment Analysis: Hotel's Review on Tripadvisor</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -294,8 +494,12 @@
                                     <p class="mb-4">
                                         Being in the hotel / homestay industry myself in the past, I know how important it is to always keep an eye on the reviews, as it could literally make or break the brand. This goal of this project is to analyze a hotel's reviews listed on TripAdvisor, and measure their sentiments.
                                     </p>
+                                    <br>
+                                    <b>Tools / libraries used:</b> <i>Python [pandas, seaborn, matplotlib, wordcloud, nltk(sentiment intensity analyzer)]</i>
+                                    <br>
+                                    <br>
                                     <p>
-                                        <a href="https://colab.research.google.com/drive/1LyXo7CU7DfNWYgheB0uLu9qfBOKElHNn" class="btn text-center btn-primary" target="_blank">Access the Notebook</a>
+                                        <a href="https://colab.research.google.com/drive/1LyXo7CU7DfNWYgheB0uLu9qfBOKElHNn" class="btn text-center btn-primary" target="_blank">source code</a>
                                     </p>
                                 </div>
                             </div>
@@ -314,7 +518,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-center text-secondary text-uppercase mb-0" style="line-height:1.3">Wordcloud on Data Analysts' Job Descriptions</h2>
+                                    <h2 class="portfolio-modal-title text-center text-secondary text-uppercase mb-0" style="line-height:1.3">HR Attrition Dashboard on Google Data Studio</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -322,13 +526,40 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/data-analyst.jpg" alt="Data Analyst" />
+                                    <iframe width="800" height="600" src="https://datastudio.google.com/embed/reporting/727d479c-6d1d-45cc-9107-344a0cf7b93e/page/2OOXC" frameborder="0" style="border:0" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
+                                    <br>
+                                    <br>
+                                    <br>
                                     <p class="mb-4">
-                                        Ever since I decided to venture into the data industry, I have always wondered if technical knowledge is essential in acquiring a job in this field. In this project, I attempd to find out the keywords appearing in the job descriptions posted by over 2,000 job listings on Data Analyst on the hiring platform, Glassdoor.
+                                        A dashboard is a great information management tool that is used to track and display a series of data that interests a particular group of stakeholders. Depending on the the stakeholders' objectives, different dashboard may show different indicators, so that the party of interest can take action based on the data.<br>
+                                        <br>
+                                        In this case study, I have built a dashboard for a stakeholder - the HR manager who has some particular busines questions in mind, regarding to the company's attrition rate.<br>
+                                        <h2>Tackling the business quetions</h2>
+                                        <br>
+                                        So the imaginary HR manager has these hypothetical questions that she would like to find out the answers from the dashboard:<br>
+                                        <br>
+                                        <ol>
+                                            <li>How satisfied are the employees in the company right now?</li>
+                                            <li>Does experience and also number of projects assigned affect an employee's attrition?</li>
+                                            <li>Which department has the highest attrition rate?</li>
+                                        </ol>
+                                        Bearing in mind these questions that she had, I have then proceeded to build a dashboard catering to her needs, so that she can actively track the relevant indicator to get her questions answered.<br>
+                                        <br>
+                                        <h2>What's next?</h2>
+                                        <br>
+                                        Now that we have a happy HR manager, we can have more happy decision makers / stakeholders too, from different departments.<br>
+                                        <br>
+                                        Ultimately, all departments should look at their own dashboard that answers their own business questions, instead of sharing one single dashboard with one another. This would then improve the business as a whole!<br>
+                                        <br>
+                                        Simple tool, but with great effect!
+                                        <br> 
+                                        <br>
+                                        <b>Tools used: <i>Excel spreadsheet, Google Data Studio</i></b><br>
+                                        <br>
                                     </p>
                                     <p>
-                                        <a href="https://colab.research.google.com/drive/1n5TnS5nsN74LSb68aqaVuR-5_73r9XKA" class="btn text-center btn-primary" target="_blank">Access the Notebook</a>
+                                        <a href="https://datastudio.google.com/u/0/reporting/727d479c-6d1d-45cc-9107-344a0cf7b93e/page/2OOXC" class="btn text-center btn-primary" target="_blank">View Dashboard</a>
                                     </p>
                                 </div>
                             </div>
@@ -360,8 +591,12 @@
                                     <p class="mb-4">
                                         There are many factors one could have contracted a Conorary Heart Disease (CHD). In this project, by using the Framingham Health Dataset, I attempt to predict who will most likely contract CHD by using a decision tree.
                                     </p>
+                                    <br>
+                                    <b>Tools / libraries used:</b> <i>Python [pandas, seaborn, sklearn(tree)]</i>
+                                    <br>
+                                    <br>
                                     <p>
-                                        <a href="https://colab.research.google.com/drive/1ZClKE03R1hx-KYkhnki25LguqN-96TE6" class="btn text-center btn-primary" target="_blank">Access the Notebook</a>
+                                        <a href="https://colab.research.google.com/drive/1ZClKE03R1hx-KYkhnki25LguqN-96TE6" class="btn text-center btn-primary" target="_blank">source code</a>
                                     </p>
                                 </div>
                             </div>
